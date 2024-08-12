@@ -62,15 +62,10 @@ private:
 int main(int argc, const char *argv[])
 {
     SetConsoleOutputCP(CP_UTF8);
-
-    File *fp = new FileWriting;     //基类指针指向对象
-    fp->openFile();
-    fp->writeFile();
-    File *np = new FileReading;
-    np->openFile();
-    np->readFile();
-    delete fp;
-    delete np;
+    FileWriting fw;
+    fw.ManipulateFile();
+    FileReading fr;
+    fr.manipulateFile();  
     return 0;
 }
 
