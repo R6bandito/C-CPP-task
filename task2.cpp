@@ -1,22 +1,22 @@
-/*Éè¼ÆÒ»¸ö¹ÜÀíÍ¼ĞÎµÄÏµÍ³¡£ÏµÍ³ÖĞÓĞÒ»¸ö»ùÀà Shape£¬ËüÓĞÁ½¸öÅÉÉúÀà Circle ºÍ Rectangle¡£
-Ã¿¸öĞÎ×´¶¼ÓĞÒ»¸ö¼ÆËãÃæ»ıµÄº¯Êı getArea()¡£
-Ê¹ÓÃ¶àÌ¬»úÖÆÊµÏÖ²»Í¬ĞÎ×´µÄÃæ»ı¼ÆËã£¬²¢±àĞ´Ò»¸ö²âÊÔ³ÌĞòÑİÊ¾¶àÌ¬ĞÔ¡£*/
+/*è®¾è®¡ä¸€ä¸ªç®¡ç†å›¾å½¢çš„ç³»ç»Ÿã€‚ç³»ç»Ÿä¸­æœ‰ä¸€ä¸ªåŸºç±» Shapeï¼Œå®ƒæœ‰ä¸¤ä¸ªæ´¾ç”Ÿç±» Circle å’Œ Rectangleã€‚
+æ¯ä¸ªå½¢çŠ¶éƒ½æœ‰ä¸€ä¸ªè®¡ç®—é¢ç§¯çš„å‡½æ•° getArea()ã€‚
+ä½¿ç”¨å¤šæ€æœºåˆ¶å®ç°ä¸åŒå½¢çŠ¶çš„é¢ç§¯è®¡ç®—ï¼Œå¹¶ç¼–å†™ä¸€ä¸ªæµ‹è¯•ç¨‹åºæ¼”ç¤ºå¤šæ€æ€§ã€‚*/
 
 #include <iostream>
 #include <math.h>
 using namespace std;
 
-//»ùÀà
+//åŸºç±»
 class shape     
 {
     public:
     shape():S(0.0){
-        cout<<"»ùÀà¹¹Ôìº¯Êıµ÷ÓÃ"<<endl;
+        cout<<"åŸºç±»æ„é€ å‡½æ•°è°ƒç”¨"<<endl;
     }
-    virtual void getArea() = 0;    //´¿Ğéº¯Êı£¬ÌåÏÖ¶àÌ¬ĞÔ
+    virtual void getArea() = 0;    //çº¯è™šå‡½æ•°ï¼Œä½“ç°å¤šæ€æ€§
     virtual ~shape(){
-        cout<<"»ùÀàÎö¹¹µ÷ÓÃ"<<endl;
-    }  //ĞéÎö¹¹º¯Êı
+        cout<<"åŸºç±»ææ„è°ƒç”¨"<<endl;
+    }  //è™šææ„å‡½æ•°
     virtual void disPlay() const = 0;
     virtual void inputData() = 0;
 
@@ -25,7 +25,7 @@ class shape
 
 };
 
-//¹«ÓĞÅÉÉúÀà Circle 
+//å…¬æœ‰æ´¾ç”Ÿç±» Circle 
 class Circle : public shape     
 {
     private:
@@ -34,19 +34,19 @@ class Circle : public shape
 
     public:
     Circle():radius(0){
-        cout<<"Circle¹¹Ôìº¯Êıµ÷ÓÃ"<<endl;
-    }    //¹¹Ôìº¯Êı²ÎÊı³õÊ¼»¯±í
+        cout<<"Circleæ„é€ å‡½æ•°è°ƒç”¨"<<endl;
+    }    //æ„é€ å‡½æ•°å‚æ•°åˆå§‹åŒ–è¡¨
     ~Circle(){
-        cout<<"CircleÎö¹¹µ÷ÓÃ"<<endl;
+        cout<<"Circleææ„è°ƒç”¨"<<endl;
     }
-    void inputData() override;     //ÓÃ»§ÊäÈë°ë¾¶
-    void getArea() override;    //¼ÆËãÃæ»ı
+    void inputData() override;     //ç”¨æˆ·è¾“å…¥åŠå¾„
+    void getArea() override;    //è®¡ç®—é¢ç§¯
     void disPlay() const override {
-        cout<<"Ô²µÄÃæ»ıÎª:"<<S<<endl;
+        cout<<"åœ†çš„é¢ç§¯ä¸º:"<<S<<endl;
     }
 };
 
-//¹²ÓĞÅÉÉúÀà Rectangle
+//å…±æœ‰æ´¾ç”Ÿç±» Rectangle
 class Rectangle : public shape
 {
     private:
@@ -55,15 +55,15 @@ class Rectangle : public shape
 
     public:
     Rectangle():length(0),width(0){
-        cout<<"Rectangle¹¹Ôìº¯Êıµ÷ÓÃ"<<endl;
+        cout<<"Rectangleæ„é€ å‡½æ•°è°ƒç”¨"<<endl;
     }
     ~Rectangle(){
-        cout<<"RectangleÎö¹¹µ÷ÓÃ"<<endl;
+        cout<<"Rectangleææ„è°ƒç”¨"<<endl;
     }
-    void inputData() override;   //ÓÃ»§ÊäÈë³¤Óë¿í
-    void getArea() override;    //¼ÆËãÃæ»ı
+    void inputData() override;   //ç”¨æˆ·è¾“å…¥é•¿ä¸å®½
+    void getArea() override;    //è®¡ç®—é¢ç§¯
     void disPlay() const override{
-        cout<<"¾ØĞÎÃæ»ıÎª:"<<S<<endl;
+        cout<<"çŸ©å½¢é¢ç§¯ä¸º:"<<S<<endl;
     }
 };
 
@@ -76,12 +76,12 @@ void Function(shape* sp)
 
 int main(int argc,const char* argv[])
 {
-    //ÔÚ¶ÑÇø¿ª±Ù¶ÔÏó
+    //åœ¨å †åŒºå¼€è¾Ÿå¯¹è±¡
     Rectangle* re = new Rectangle;
     Circle* ce = new Circle;
     Function(re);
     Function(ce);
-    //ÊÖ¶¯ÊÍ·Å¶ÔÏó
+    //æ‰‹åŠ¨é‡Šæ”¾å¯¹è±¡
     delete re;  
     delete ce;
     return 0;
@@ -90,7 +90,7 @@ int main(int argc,const char* argv[])
 
 inline void Circle::inputData()
 {
-    cout<<"ÇëÊäÈë°ë¾¶£¨ÕûÊı£©"<<endl;
+    cout<<"è¯·è¾“å…¥åŠå¾„ï¼ˆæ•´æ•°ï¼‰"<<endl;
     cin>>radius;
 }
 
@@ -101,7 +101,7 @@ inline void Circle::getArea()
 
 inline void Rectangle::inputData()
 {
-    cout<<"ÇëÊäÈë³¤Óë¿í"<<endl;
+    cout<<"è¯·è¾“å…¥é•¿ä¸å®½"<<endl;
     cin>>length>>width;
 }
 
