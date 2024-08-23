@@ -48,6 +48,8 @@ void Menu::lace_of_Menu()
                 count++;
                 cout << endl;
             }
+            //重置count
+            this->count = 0;
             return;
         }
     }
@@ -63,8 +65,8 @@ int Menu::content_of_Menu()
     char ch;
     int count = 0;
 
-    // 光标向上移动7行，向右移动7列
-    cout << "\033[7A" << "\033[7C";
+    // 光标移动到3行8列
+    cout << "\033[3;8H";
     cout << "1.添加学生";
 
     // 将光标移动到4行8列的位置
@@ -131,5 +133,6 @@ label1:
         goto label1;
     }
     //返回光标输入的数据
+    count = 0;
     return input[0];
 }

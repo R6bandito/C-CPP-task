@@ -18,10 +18,10 @@ class Student
     int ID;
     vector<string> grades;
     
+    
     public:
     Student();  //声明构造函数
     void setStudentInfo();  //声明添加学生信息函数
-
 };
 
 #endif  //STUDENT
