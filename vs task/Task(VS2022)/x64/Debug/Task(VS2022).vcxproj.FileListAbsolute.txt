@@ -1,1 +1,2 @@
 D:\MyGitRes\cpptask\vs task\Task(VS2022)\x64\Debug\Task(VS2022).exe
+D:\my files\GitHub\C-CPP-task\vs task\Task(VS2022)\x64\Debug\Task(VS2022).exe
