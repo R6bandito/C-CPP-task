@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <thread>
 #include "atm.hpp"
@@ -62,3 +63,4 @@ int main(int argc, const char* argv[]) {
 	//getchar();
 	return 0;
 }
+*/

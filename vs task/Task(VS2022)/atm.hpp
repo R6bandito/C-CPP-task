@@ -1,4 +1,4 @@
-#ifndef ATM_MY
+/*#ifndef ATM_MY
 #define ATM_MY
 
 #include <iostream>
@@ -106,3 +106,4 @@ bool atm::Unlock(const string& _password) const {	//验证密码是否正确
 }
 
 #endif // !ATM_MY
+*/
