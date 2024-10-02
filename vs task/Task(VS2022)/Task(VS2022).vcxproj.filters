@@ -24,12 +24,18 @@
     <ClCompile Include="scope loop.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="lambda.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="atm.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="scope loop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lambda.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
